@@ -7,7 +7,7 @@ int main(void)
 {
 	char x = 'z';
 
-	while (x != '{')
+	while (x > 96)
 	{
 		putchar(x);
 		x--;
