@@ -5,12 +5,12 @@
  */
 int main(void)
 {
-char x = 'a';
+char i = 'a';
 
-while (x != '{')
-{  putchar(x)
-x++;
+while (i != '{')
+{  putchar(i)
+i++;
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
