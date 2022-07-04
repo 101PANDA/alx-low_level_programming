@@ -12,6 +12,7 @@ int main(void)
 		printf("%c", a);
 		a++;
 	}
+	printf("\n");
 	return (0);
 }
 
