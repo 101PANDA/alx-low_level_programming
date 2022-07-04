@@ -8,10 +8,10 @@ int main(void)
 	int a = 48;
 
 	while (a < 58)
-       	{
-       		printf("%c\n", a);
-       		a++;
-       	}
+	{
+		printf("%c", a);
+		a++;
+	}
 	return (0);
 }
 
