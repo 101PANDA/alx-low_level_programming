@@ -1,13 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - entry point
  * Return: 0 (success)
  */
 int main(void)
 {
-	char r = putchar;
+	char ch[8] = "_putchar";
+	int i;
 
-	printf('_');
-	printf("r\n");
+	for (i = 0; i < 8; i++)
+		_putchar(ch[i]);
 	return (0);
 }
