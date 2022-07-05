@@ -1,0 +1,12 @@
+#include <stdio.h>
+/**
+ * main - entry point
+ * Return: 0 (success)
+ */
+int main(void)
+{
+	char r = _putchar;
+
+	printf("r\n");
+	return (0);
+}
