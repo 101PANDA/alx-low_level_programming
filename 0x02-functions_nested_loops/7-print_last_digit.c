@@ -1,20 +1,29 @@
 #include "main.h"
+
 /**
- * print_last_digit - returns the last digit of a number.
- * @n: The number from which the last digit is stripped.
+ *  print_last_digit - last digit
  *
- * Return: The last digit of the number if successful.
+ *@n: The int to print
+ * Return: Always 0.
  */
 
 int print_last_digit(int n)
+
 {
-	int l_digit;
+	int last_digit;
 
 	if (n < 0)
 	{
-		n *= -1;
+		last_digit = (-1 * (n % 10));
+		_putchar (last_digit + '0');
+		return (last_digit);
 	}
-	l_digit = n % 10;
-	_putchar('0' + l_digit);
-	return (l_digit);
+
+	else
+	{
+		last_digit = (n % 10);
+		_putchar (last_digit + '0');
+		return (last_digit);
+	}
+
 }
