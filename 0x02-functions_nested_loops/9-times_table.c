@@ -15,7 +15,10 @@ void times_table(void)
 		{
 			m = i * x;
 			if (m < 10)
+			{
+				_putchar(' ');
 				_putchar('0' + m);
+			}
 			else
 			{
 				_putchar('0' + m  / 10);
