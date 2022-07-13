@@ -4,7 +4,7 @@
  * @str: pointer to the string
  * Return: void
  */
-int puts2(char *str)
+void puts2(char *str)
 {
 	int i;
 	for (i = 0; str[i] != '\0'; i++)
