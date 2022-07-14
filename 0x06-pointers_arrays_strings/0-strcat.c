@@ -2,8 +2,8 @@
 /**
  * _strcat - concatenates two strings
  * @dest: pointer to the string to be concatenated
- * @char: pointer to the string to be concatenated from
- * Return: char[dest] (success)
+ * @src: pointer to the string to be concatenated from
+ * Return: characte (success)
  */
 char *_strcat(char *dest, char *src)
 {
