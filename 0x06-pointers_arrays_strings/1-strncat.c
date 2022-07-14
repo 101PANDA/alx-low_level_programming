@@ -2,7 +2,7 @@
 /**
  * _strncat - concatenates two strings
  * @dest: pointer to the string to be concatenated
- * @char: pointer to the string to be concatenated from
+ * @src: pointer to the string to be concatenated from
  * @n: number of bytes to be concatenated
  * Return: char[dest] (success)
  */
@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 	sndcount = 0;
 	while (src[sndcount] != '\0')
 	{
-		if (sndcount <= (n -1))
+		if (sndcount <= (n - 1))
 			dest[fstcount] = src[sndcount];
 		fstcount++;
 		sndcount++;
