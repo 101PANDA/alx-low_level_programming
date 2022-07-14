@@ -16,7 +16,10 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[varno] = src[varno];
 		varno++;
 	}
-	if (varno = n)
+	while (varno < n)
+	{
 		dest[varno] = '\0';
+		varno++;
+	}
 	return (dest);
 }
