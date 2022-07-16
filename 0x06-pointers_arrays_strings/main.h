@@ -14,3 +14,4 @@ int isPrintableASCII(int n);
 void printHexes(char *b, int start, int end);
 void printASCII(char *b, int start, int end);
 void print_buffer(char *b, int size);
+int _putchar(char);
