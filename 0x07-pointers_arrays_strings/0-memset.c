@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_memset - fills memory witha constant byte
+ * _memset - fills memory witha constant byte
  * @s: pointer to the space to be filled
  * @b: the content of the space
  * @n: max space to fill
