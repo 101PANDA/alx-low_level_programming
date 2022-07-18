@@ -10,8 +10,10 @@ char *_strchr(char *s, char c)
 	int count;
 
 	for (count = 0; s[count] != c; count++)
-		continue;
-
+	{
+		if (s[count] == c)
+			return (&s[count]);
+	}
 	if (s[count] == c)
 		return (&s[count]);
 	else
