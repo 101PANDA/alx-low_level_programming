@@ -4,6 +4,7 @@
  * @src: pointer to the space to be copied
  * @dest: pointer to the space to be filled with the content copied
  * @n: max space to be copied
+ * Return: *dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
