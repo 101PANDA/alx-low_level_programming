@@ -4,6 +4,7 @@
  * @s: pointer to the space to be filled
  * @b: the content of the space
  * @n: max space to fill
+ * Return: *s
  */
 char *_memset(char *s, char b, unsigned int n)
 {
