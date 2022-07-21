@@ -8,7 +8,7 @@ int _strlen_recursion(char *s)
 {
 	if (!*s)
 		return (0);
-	return (1 + _strlen_recursion(++s));
+	return (1 + _strlen_recursion(s + 1));
 }
 
 /**
@@ -34,7 +34,7 @@ int check(char *s, int length)
 {
 	if (length < 1)
 		return (1);
-	if (*s == *(s + 1))
+	if (*s == *(s + length))
 		return (check(s + 1, length - 2));
 	return (0);
 }
