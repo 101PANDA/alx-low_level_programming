@@ -1,6 +1,5 @@
-#ifdef FILE_MAIN
-#define FILE_NAME
-int _putchar(char c);
+#ifndef FILE_MAIN
+#define FILE_MAIN
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
