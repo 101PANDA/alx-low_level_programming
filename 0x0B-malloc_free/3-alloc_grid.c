@@ -3,9 +3,10 @@
 #include "main.h"
 
 /**
- * alloc_grid - return pointer to 2 dimensional array of int
+ * alloc_grid - return pointer to 2 dimensional array of int called matrix
  * @width: width of the two dimensional array
  * @height: height of the two dimentional array
+ * Return: matrix
  */
 
 int **alloc_grid(int width, int height)
