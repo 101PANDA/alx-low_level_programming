@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
-
+/**
+ * str_concat - concates two strings
+ * @s1: first string to concate
+ * @s2: second string to concate
+ * Return: the two strings concated side by side
+ */
 char *str_concat(char *s1, char *s2)
 {
 	int length_s1, length_s2, length_newstr, count, rndno = 0;
