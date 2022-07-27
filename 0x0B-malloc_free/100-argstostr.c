@@ -10,14 +10,11 @@
 
 int _strlen(char *s)
 {
-	int l = 0;
+	int i;
 
-	while (*s != '\0')
-	{
-		s++;
-		l++;
-	}
-	return (l);
+	for (i = 0; s[i] != '\0'; i++)
+		;
+	return (i);
 }
 
 /**
@@ -29,38 +26,45 @@ int _strlen(char *s)
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int len, R = 0;
-	char *p;
+	int length, j, i, strpos;
+	char *newstr;
 
 	if (!ac || !av)
 	{
 		return (NULL);
 	}
-	R = 0;
 
+	length = 0;
 	for (i = 0; i < ac; i++)
 	{
-		len = _strlen(av[i]) + 1;
-		R += len;
+		length += _strlen(av[i]);
+		length++;
 	}
-	p = malloc(sizeof(char) * R + 1);
 
-	if (!p)
+	length++;
+	newstr = malloc(sizeof(char) * length);
+
+	if (newstr == NULL)
 	{
 		return (NULL);
 	}
 
+	strpos = 0;
 	for (i = 0; i < ac; i++)
 	{
-		len = _strlen(av[i]);
+		/*length = _strlen(av[i]);*/
 
-		for (j = 0; j < len; j++, k++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			p[k] = av[i][j];
+			newstr[strpos] = av[i][j];
+			strpos++;
 		}
-		p[k++] = '\n';
+		if (av[i][j] == '\0')
+		{
+			newstr[strpos] = '\n';
+			strpos++;
+		}
 	}
-	p[k] = '\0';
-	return (p);
+
+	return (newstr);
 }
