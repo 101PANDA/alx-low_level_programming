@@ -13,6 +13,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr, *news2;
 
+	if (s1  == NULL && s2 == NULL)
+	{
+		s1 = "";
+		s2 = "";
+	}
 	if (s1 == NULL)
 		s1 = "";
 	if (s1 == NULL)
