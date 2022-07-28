@@ -12,7 +12,7 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr, *news2;
-
+	unsigned int length_s2, i;
 	if (s1  == NULL && s2 == NULL)
 	{
 		s1 = "";
@@ -22,7 +22,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s1 == NULL)
 		s1 = "";
-	news2 = _strdup(s2, n);
+	length_s2 = _strlen(s2);
+
+	if (n >= length_s2)
+		n = length_s2;
+	news2 = malloc(sizeof(char) * n + 1);
+
+	for (i = 0; i < n; i++)
+		news2[i] = s2[i];
+
 	if (news2 == NULL)
 		return (NULL);
 
@@ -33,31 +41,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	return (ptr);
 }
-/**
- * _strdup - duplicates str with ref to strcount
- * @str: pointer to the string
- * @strcount: number of characters to copy from str
- * Return: pointer to allocated space in mem or null if str is equal to null
-*/
-char *_strdup(char *str, int strcount)
-{
-	int i;
-	char *str2;
-
-	if (str == NULL)
-		return (NULL);
-	if (strcount == _strlen(str))
-		strcount = _strlen(str);
-	strcount++;
-
-	str2 = malloc(sizeof(char) * strcount);
-	if (str2 == NULL)
-		return (NULL);
-
-	for (i = 0; i < strcount; i++)
-		str2[i] = str[i];
-	return (str2);
-}
 
 /**
  * str_concat - concates two strings
@@ -65,7 +48,6 @@ char *_strdup(char *str, int strcount)
  * @s2: second string to concate
  * Return: the two strings concated side by side
  */
-
 char *str_concat(char *s1, char *s2)
 {
 	int length_s1, length_s2, length_newstr, count, rndno = 0;
