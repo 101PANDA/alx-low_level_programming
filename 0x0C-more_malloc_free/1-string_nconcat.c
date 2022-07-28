@@ -29,11 +29,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = str_concat(s1, news2);
 	free(news2);
 	if (ptr == NULL)
-		return(NULL);
+		return (NULL);
 
 	return (ptr);
 }
 /**
+ * _strdup - duplicates str with ref to strcount
  * @str: pointer to the string
  * @strcount: number of characters to copy from str
  * Return: pointer to allocated space in mem or null if str is equal to null
