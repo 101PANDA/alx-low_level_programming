@@ -1,5 +1,10 @@
 #ifndef MAIN_H
 #define MAIN_H
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
@@ -8,4 +13,5 @@ char *str_concat(char *s1, char *s2);
 int _strlen(char *s);
 char *_strdup(char *str, int strcount);
 char *_memset(char *s, char b, unsigned int n);
+int _putchar(char c);
 #endif
