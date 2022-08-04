@@ -3,16 +3,18 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
- * struct calc - Struct calc
- * @calc: the operator
- * @action: the function associated
+ * struct op - Struct op
+ *
+ * @op: The operator
+ * @f: The function associated
  */
-typedef struct calc
+typedef struct op
 {
-	char *calc;
-	int (*action)(int a, int b);
-} calc_t;
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
