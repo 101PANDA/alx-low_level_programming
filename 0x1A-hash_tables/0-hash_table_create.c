@@ -9,7 +9,7 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *the_table;
-	unsigned long int count = 0
+	unsigned long int count = 0;
 
 	if (size <= 0)
 		return (NULL);
@@ -19,7 +19,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 
 	the_table->size = size;
-	the_table->array = alloc(sizeof(hash_node_t) * size);
+	the_table->array = malloc(sizeof(hash_node_t) * size);
 	if (the_table->array == NULL)
 	  return (NULL);
 
